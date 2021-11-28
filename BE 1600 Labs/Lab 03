@@ -1,0 +1,24 @@
+import math
+pi = 3.1416
+
+def distance(xp,xc,yp,yc):
+    d = (xp - xc) ** 2 + (yp - yc) ** 2
+    return d
+
+def radius(xp,xc,yp,yc):
+    r = math.sqrt(distance(xp,xc,yp,yc))
+    return r
+
+def circumference(r):
+    c = 2 * pi * r
+    return c
+
+x2 = float(input("Enter the x coordinate of the center of the circle")) #xcenter
+y2 = float(input("Enter the y coordinates of the center of the circle")) #ycenter
+x1 = float(input("Enter the x coordinate of a point on the circle")) #xpoint
+y1 = float(input("Enter the y coordinates of a point on the circle")) #ypoint
+d = distance(x1,x2,y1,y2)
+r = radius(x1,x2,y1,y2)
+c = circumference(r)
+print("Circle Radius = ", r)
+print("Circle Circumference = ",c)
