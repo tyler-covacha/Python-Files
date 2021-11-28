@@ -1,0 +1,95 @@
+##from cImage import Pixel
+##from cImage import ImageWin
+##from cImage import EmptyImage
+from cImage import* # imports all things from class
+
+# cross lines
+p1 = Pixel(255,200,100)
+p2 = Pixel(255,0,0)
+print(p1)
+print(p1.getRed())
+im = EmptyImage(300,500)
+w = ImageWin("myPicture",300.500)
+for i in range(300):
+    im.setPixel(i,250,p2)
+for i in range(500):
+    im.setPixel(150,i,p2)
+im.draw(w)
+
+
+# images are ordered starting from 0 
+# dimensions start with column, then row number
+    # setPixel(col, row, newp)
+
+###############
+
+
+# diagonal line
+p2 = Pixel(255,0,0)
+im = EmptyImage(300,500)
+w = ImageWin("myPicture",300,300)
+for i in range(300):
+    im.setPixel(i,0, p2)
+for i in range(300):
+    im.setPixel(i,i, p2)
+im.draw(w)
+
+
+
+# fill image
+p2 = Pixel(255,0,0)
+im = EmptyImage(300,500)
+w = ImageWin("myPicture",300,500)
+for i in range(500):
+    for j in range(300):
+        im.setPixel(j,i, p2)
+
+
+
+##############
+
+
+from cImage import*
+#myWin = ImageWin("butterfly", 300,224)
+butterfly = FileImage("butterfly.gif")
+myWin = ImageWin("butterfly", butterfly.getWidth() + 100, butterfly.getHeight() + 100   )
+butterfly.draw(myWin)
+
+# unlike turtle, (0 , 0) is at the top left corner of the window
+
+
+''' adding image beside original image '''
+from cImage import *
+
+def negativePixel(oldpixel):
+    newred = 255 - oldPixel.getRed()
+    newgreen = 255 - oldPixel.getGreen()
+    newblue = 255 - oldPixel.getBlue()
+    newPixel = Pixel(newred, newgreen, newblue)
+    return newPixel
+
+def makeNegative(imageFile):
+    oldImage =  FileImage(ImageFile)
+    width = oldImage.getWidth()
+    height = oldImage.getHeight()
+
+    myImageWindow = ImageWin("Negative image", width * 2, height)
+    oldImage.draw(myImageWindow)
+    newIm = EmptyImage(width, height)
+
+    for row in range(height):
+        for col in range(width):
+            oldPixel = oldImage.getPixel(col, row)
+            newPixel = negativePixel(oldPixel)
+            newIm.setPIxel(col, row, newPixel)
+
+    newIm.setPosition(width + 1, 0)
+    newIm.draw(myImadeWindow)
+    myImageWindow.exitOnClick()
+
+makeNegative("butterfly.gif")
+
+apixel = Pixel(0,0,0)
+print(negativePixel(apixel))
+
+
