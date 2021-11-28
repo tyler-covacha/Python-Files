@@ -1,0 +1,29 @@
+#Falling Distance
+
+def falling_distance(time):
+    result = d = (1 / 2) * 9.8 * t ** 2
+    return result
+
+t = input("enter the amount of time in seconds")
+t = float(t)
+result = falling_distance(t)
+print("Falling Distance for an object that has been falling for",t,"seconds is",result)
+
+
+#Future Value
+
+def future_value(price, interest, time):
+    result = p * (1 + i) ** t
+    return result
+
+p = input("Enter the amount of money in your account")
+p = float(p)
+i = input("Enter the monthly interst rate")
+i = float(i)
+t = input("Enter the number of months")
+t = float(t)
+result = future_value(p,i,t)
+print("The information for you account is:")
+print("Present value: $",p)
+print("Interest Rate: %",i)
+print("After",t,"months, the value of your account will be $",result)
