@@ -1,0 +1,38 @@
+#All Numbers
+def allNum(first, sec):
+    print("print all Numbers:")
+    for i in range(first, sec + 1):
+        print(i, end=" ")
+
+#Odd Numbers
+def oddNum(first, sec):
+    print()
+    print("print all odd Numbers:")
+    for i in range(first, sec + 1, 2):
+        print(i, end=" ")
+
+#Sum of even numbers
+def sumEven(first, sec):
+    print()
+    sumeven = 0
+    print("Print sum of the even numbers:")
+    for i in range(first + 1, sec + 1,2):
+        #print(i)
+        sumeven = sumeven + i
+    print(sumeven)
+
+#sum of square of odd numbers
+def sumSquareOdd(first, sec):
+    print("Print sum of the square of the odd numbers:")
+    sumsquareodd = float(0)
+    for i in range(first,sec,2):
+        #print(i)
+        sumsquareodd = sumsquareodd + i ** 2
+    print(sumsquareodd)
+        
+firstNum = int(input("Enter an odd number"))
+secondNum = int(input("Enter another number"))
+allNum(firstNum,secondNum)
+oddNum(firstNum,secondNum)
+sumEven(firstNum,secondNum)
+sumSquareOdd(firstNum,secondNum)
