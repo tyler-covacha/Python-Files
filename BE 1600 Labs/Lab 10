@@ -1,0 +1,21 @@
+def pair_dictionary(d1, d2):
+    print("1st dictionary:",d1)
+    print()
+    print("2nd dictionary:",d2)
+    print()
+    L = []
+    new_d = {}
+    for key,value in d1.items():
+        if key in d2.keys() and value in d2.values():
+            new_d[key] = value
+    print("New dictionary:",new_d)
+        
+
+dict1 = {'Janet':87, 'Logan':62, 'Whitaker':46, 'Alyssa':100, 'Stef':80,
+        'Jeff':88, 'Kim':52, 'Sylvia':95}
+
+dict2 = {'Logan':62, 'Kim':52, 'Whitaker':52, 'Jeff':88, 'Stef':80, 'Brian':60,
+         'Lisa':83, 'Sylvia':87}
+
+
+pair_dictionary(dict1, dict2)
