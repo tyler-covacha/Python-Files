@@ -1,0 +1,17 @@
+def DaysPennies(numOfDays):
+    print("Day      Pennies")
+    print("-----------------")
+    day = 1
+    salary = 0
+    penny = float(.01)
+    for i in range(numOfDays):
+        print(day,"\t$",penny)
+        day = day + 1
+        salary = salary + penny
+        penny = penny * 2
+    print("The total salary for {} days is: ${:2.2f}".format(numOfDays, salary))
+
+days = int(input("Enter the number of days:"))
+DaysPennies(days)
+    
+ 
