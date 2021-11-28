@@ -1,0 +1,28 @@
+import random
+
+r = random.randint(1,150)
+price = int(25)
+r = int(r)
+
+print("Number of Packages Purchased:",r)
+total = price * r
+if r >= 100:
+    discount = total * .5
+    total -= discount
+    print("Discount Amount: $",discount)
+elif r >= 50:
+    discount = total * .4
+    total -= discount
+    print("Discount Amount: $",discount)
+elif r >= 20:
+    discount = total * .3
+    total -= discount
+    print("Discount Amount: $",discount)
+elif r >= 10:
+    discount = total *.2
+    total -= discount
+    print("Discount Amount: $",discount)
+else:
+    print("Discount Amount: $ 0")
+print("Total Amount: $",total)
+    
