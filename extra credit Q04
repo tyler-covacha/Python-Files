@@ -1,0 +1,31 @@
+import csv
+f = open("riskfactors.csv",'r')
+f2 = csv.reader(f)
+for i in range(6):
+    titles = next(f2)
+
+states = []
+heart_disease = []
+motor_death = []
+teen_birth = []
+adult_smoking = []
+adult_obesity = []
+
+
+for e in f2:
+    states.append(e[0])
+    heart_disease.append(float(e[1]))
+    motor_death.append(float(e[5]))
+    teen_birth.append(float(e[7]))
+    adult_smoking.append(e[11])
+    adult_obesity.append(e[13])
+
+for i in range(len(adult_smoking)):
+    original = adult_smoking[i]
+    new = float(original.replace('%',''))
+    adult_smoking[i] = new
+
+for i in range(len(adult_obesity)):
+    original = adult_obesity[i]
+    new = float(original.replace('%',''))
+    adult_obesity[i] = new
