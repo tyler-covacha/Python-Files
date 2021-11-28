@@ -1,0 +1,40 @@
+import random
+
+# collapse function
+def collapse(L):
+    collapse_list = []
+    if len(L) % 2 == 0:
+        for i in range((len(L))//2):
+            pair = L[2 * i] + L[2 * i + 1]
+            collapse_list.append(pair)
+        print('Collapse List:',collapse_list)
+    else:
+        L.append(int(0))
+        for i in range((len(L)//2)):
+            pair = L[2 * i] + L[2 * i + 1]
+            collapse_list.append(pair)
+        print('Collapse LIst:',collapse_list)
+
+    return collapse_list
+
+# random number between 2 and 10
+k = random.randint(2,10)
+print('Enter',k,'values:')
+
+# empty list
+lis = []
+
+# enter k values
+for i in range(k):
+    print("Enter value",i+1,end='')
+    print(':',end=' ')
+    element = int(input())
+
+    # adds element to L
+    lis.append(element)
+
+print('Old List:',lis)
+
+collapse(lis)
+
+
