@@ -1,0 +1,40 @@
+f = open("numbers.txt",'r')
+
+negative_L = []
+odd_L = []
+positive_L = []
+
+''' sorts each number into a list (negative numbers list
+                                  odd numbers list
+                                  positive numbers list)'''
+for line in f:
+    L = line.split()
+    number = int(L[1])
+
+    # if number is odd, added to odd number list
+    if number % 2 != 0:
+        odd_L.append(number)
+
+    # if number is negative, added to negative number list
+    if number < 0:
+        negative_L.append(number)
+
+    # if number is positive, added to positive number list
+    else:
+        positive_L.append(number)
+
+''' finds sum of negative numbers'''
+negative_total = 0
+for number in negative_L:
+    negative_total += number
+
+''' finds average of positive numbers'''
+positive_total = 0
+for number in positive_L:
+    positive_total += number
+average = positive_total / len(positive_L)
+
+print("negative count = ", len(negative_L))
+print("odd count = ", len(odd_L))
+print("negative sum = ", negative_total)
+print("positive average = ", average)
