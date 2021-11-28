@@ -1,0 +1,9 @@
+import math
+p = math.pi
+p = float(p)
+r = input("Enter the Radius of the Circle")
+r = float(r)
+print("Circle Radius = ",r)
+d = print("Diameter = ",2 * r) # diameter = 2 * r
+c = print("Circumference = ",2 * p * r) # circumference = 2 * pi * r
+a = print("Area = ",p * r ** 2) # area = pi * r^2
