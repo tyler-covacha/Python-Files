@@ -1,0 +1,23 @@
+#use a function taht takes a parameter
+#capitalize all characters
+#remove first and last characters from string
+#use a loop to find the consonants (letters that aren't vowels)
+#replace them with *
+#also count numberes of consonants
+
+def changeString(x):
+    x = x.upper()
+    print("Old String:",x)
+    x = x[1:-1]
+    vowels = ["A","E","I","O","U"]
+    consonantCounter = 0
+    vowel = 'AEIOU'
+    for i in x:
+        if i not in vowel and (i != " "):
+            consonantCounter += 1
+            x = x.replace(i,"*")
+    print("New String:",x)
+    print("Number of consonant characters:",consonantCounter)
+
+astring = input("Enter a string")
+changeString(astring)
