@@ -1,0 +1,8 @@
+Detroit 23.32
+Rochester 42.64
+Ferndale 12.87
+Lake_Orion 34.55
+Ann_Arbor 26.66
+Sterling_Heights 69.94
+Oxford 43.5
+Clarkston 123.0
